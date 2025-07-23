@@ -54,13 +54,20 @@ class _CourseDetailsPageState extends State<CourseDetailsPage>
 
   bool playing = false;
 
-  final HomeController controller = Get.find<HomeController>();
+  HomeController? _controller;
+  late final HomeController controller;
 
   late TabController _singleTabController;
 
   @override
   void initState() {
     super.initState();
+    try {
+      _controller = Get.find<HomeController>();
+    } catch (e) {
+      _controller = Get.put(HomeController());
+    }
+    controller = _controller!;
     _loadCourse();
     if (Platform.isIOS) {
       controller.isPurchasingIAP.value = false;
@@ -151,7 +158,9 @@ class _CourseDetailsPageState extends State<CourseDetailsPage>
                           SizedBox(width: 10),
                           Expanded(
                             child: Text(
-                              controller.courseDetails.value.title?.isNotEmpty == true
+                              controller.courseDetails.value.title
+                                          ?.isNotEmpty ==
+                                      true
                                   ? controller.courseDetails.value.title!
                                   : "No Title",
                               overflow: TextOverflow.ellipsis,
