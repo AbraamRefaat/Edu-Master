@@ -1,0 +1,2 @@
+C:/Users/Abraam Refaat/Desktop/lms/InfixLMS_Flutter_Package_v2.5.0/lms_flutter_app/android/app/.cxx/Debug/1c2lf626/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Abraam Refaat/Desktop/lms/InfixLMS_Flutter_Package_v2.5.0/lms_flutter_app/android/app/.cxx/Debug/1c2lf626/arm64-v8a/CMakeFiles/rebuild_cache.dir
